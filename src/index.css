@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+Professional Framing Business - Warm, Elegant, Sophisticated
+*/
+
+@layer base {
+  :root {
+    --background: 48 35% 96%;
+    --foreground: 280 15% 20%;
+
+    --card: 48 30% 98%;
+    --card-foreground: 280 15% 20%;
+
+    --popover: 48 30% 98%;
+    --popover-foreground: 280 15% 20%;
+
+    --primary: 280 25% 35%;
+    --primary-foreground: 48 35% 96%;
+
+    --secondary: 35 65% 70%;
+    --secondary-foreground: 280 15% 20%;
+
+    --muted: 48 25% 90%;
+    --muted-foreground: 280 10% 50%;
+
+    --accent: 35 85% 55%;
+    --accent-foreground: 48 35% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 48 35% 96%;
+
+    --border: 280 15% 85%;
+    --input: 280 15% 85%;
+    --ring: 280 25% 35%;
+
+    --radius: 0.75rem;
+
+    --shadow-soft: 0 4px 20px -4px hsl(280 25% 35% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(280 25% 35% / 0.15);
+
+    --sidebar-background: 48 30% 97%;
+    --sidebar-foreground: 280 15% 25%;
+    --sidebar-primary: 280 25% 35%;
+    --sidebar-primary-foreground: 48 35% 96%;
+    --sidebar-accent: 35 85% 55%;
+    --sidebar-accent-foreground: 48 35% 96%;
+    --sidebar-border: 280 15% 85%;
+    --sidebar-ring: 35 85% 55%;
+  }
+
+  .dark {
+    --background: 280 15% 15%;
+    --foreground: 48 35% 96%;
+
+    --card: 280 20% 20%;
+    --card-foreground: 48 35% 96%;
+
+    --popover: 280 20% 20%;
+    --popover-foreground: 48 35% 96%;
+
+    --primary: 48 35% 96%;
+    --primary-foreground: 280 25% 35%;
+
+    --secondary: 35 65% 60%;
+    --secondary-foreground: 280 15% 20%;
+
+    --muted: 280 20% 30%;
+    --muted-foreground: 48 25% 65%;
+
+    --accent: 35 85% 55%;
+    --accent-foreground: 280 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 48 35% 96%;
+
+    --border: 280 20% 30%;
+    --input: 280 20% 30%;
+    --ring: 35 85% 55%;
+    --sidebar-background: 280 15% 12%;
+    --sidebar-foreground: 48 35% 96%;
+    --sidebar-primary: 35 85% 55%;
+    --sidebar-primary-foreground: 280 15% 15%;
+    --sidebar-accent: 48 35% 96%;
+    --sidebar-accent-foreground: 280 25% 35%;
+    --sidebar-border: 280 20% 30%;
+    --sidebar-ring: 35 85% 55%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
